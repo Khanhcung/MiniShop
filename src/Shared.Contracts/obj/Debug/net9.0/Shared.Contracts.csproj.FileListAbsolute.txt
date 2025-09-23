@@ -1,0 +1,11 @@
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\bin\Debug\net9.0\Shared.Contracts.deps.json
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\bin\Debug\net9.0\Shared.Contracts.dll
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\bin\Debug\net9.0\Shared.Contracts.pdb
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\Shared.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\Shared.Contracts.AssemblyInfoInputs.cache
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\Shared.Contracts.AssemblyInfo.cs
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\Shared.Contracts.csproj.CoreCompileInputs.cache
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\Shared.Contracts.dll
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\refint\Shared.Contracts.dll
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\Shared.Contracts.pdb
+E:\diskD\asp\mini-order-inventory\src\Shared.Contracts\obj\Debug\net9.0\ref\Shared.Contracts.dll

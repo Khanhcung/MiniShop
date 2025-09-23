@@ -1,0 +1,12 @@
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\bin\Debug\net9.0\BuildingBlocks.deps.json
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\bin\Debug\net9.0\BuildingBlocks.dll
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\bin\Debug\net9.0\BuildingBlocks.pdb
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.GeneratedMSBuildEditorConfig.editorconfig
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.AssemblyInfoInputs.cache
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.AssemblyInfo.cs
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.csproj.CoreCompileInputs.cache
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.dll
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\refint\BuildingBlocks.dll
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.pdb
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\ref\BuildingBlocks.dll
+E:\diskD\asp\mini-order-inventory\src\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.csproj.AssemblyReference.cache

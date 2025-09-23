@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Allservices",
+    "Projects": [
+      {
+        "Path": "src\\Shared.Contracts\\Shared.Contracts.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Product.API\\Product.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Inventory.API\\Inventory.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Order.API\\Order.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
