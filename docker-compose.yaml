@@ -27,21 +27,39 @@ services:
       - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
       - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
     ports: ["9092:9092"]
-
+    healthcheck:
+        test: ["CMD-SHELL", "/opt/bitnami/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list > /dev/null 2>&1"]
+        interval: 10s
+        timeout: 5s
+        retries: 12
   product.api:
-    build: ../src/Product.API
-    environment:
-      - ConnectionStrings__Default=Server=sqlserver;Database=ProductDb;User Id=sa;Password=Your_strong_password_123;TrustServerCertificate=True
-      - Redis__Connection=redis:6379
-    depends_on: [sqlserver, redis]
-    ports: ["5001:8080"]
+        build: ../src/Product.API
+        environment:
+            - ConnectionStrings__Default=Server=sqlserver;Database=ProductDb;User Id=sa;Password=Your_strong_password_123;TrustServerCertificate=True
+            - Redis__Connection=redis:6379
+            - Kafka__BootstrapServers=kafka:9092
+        depends_on:
+            kafka:
+                condition: service_healthy
+            sqlserver:
+                condition: service_started
+            redis:
+             condition: service_started
+        ports: ["5001:8080"]
 
   inventory.api:
     build: ../src/Inventory.API
     environment:
       - ConnectionStrings__Default=Server=sqlserver;Database=InventoryDb;User Id=sa;Password=Your_strong_password_123;TrustServerCertificate=True
       - Kafka__BootstrapServers=kafka:9092
-    depends_on: [sqlserver, kafka]
+      - Kafka__Topics__OrderCreated=order.created
+      - Kafka__Topics__InventoryReserved=inventory.reserved
+      - Kafka__Topics__InventoryFailed=inventory.failed
+    depends_on:
+      kafka:
+        condition: service_healthy
+      sqlserver:
+        condition: service_started
     ports: ["5002:8080"]
 
   order.api:
@@ -50,6 +68,16 @@ services:
       - ConnectionStrings__Default=Server=sqlserver;Database=OrderDb;User Id=sa;Password=Your_strong_password_123;TrustServerCertificate=True
       - Redis__Connection=redis:6379
       - Kafka__BootstrapServers=kafka:9092
-      - Product__BaseUrl=http://product.api:8080
-    depends_on: [sqlserver, kafka, redis, product.api]
+      - Kafka__Topics__InventoryReserved=inventory.reserved
+      - Kafka__Topics__InventoryFailed=inventory.failed
+      - Product__BaseUrl=http://product.api:8080/
+    depends_on:
+      kafka:
+        condition: service_healthy
+      sqlserver:
+        condition: service_started
+      redis:
+        condition: service_started
+      product.api:
+        condition: service_started
     ports: ["5003:8080"]
